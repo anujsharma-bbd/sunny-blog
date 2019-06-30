@@ -27,5 +27,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "react-router-dom": "^5.0.1"
   }
 }
