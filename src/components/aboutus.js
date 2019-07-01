@@ -6,10 +6,7 @@ class AboutUs extends React.Component {
          <div className="aboutus">
             <p>
                Hi this is Sunny Sharma <br/>
-               I am just trying to create my new first blog 
-               rgteryrtuhy <br />
-               fgdgrthtryu<br />
-
+               I am just trying to create my first blog 
             </p>
          </div>
       );
