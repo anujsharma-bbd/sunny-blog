@@ -4,7 +4,13 @@ class AboutUs extends React.Component {
    render() {
       return (
          <div className="aboutus">
-            this is about us
+            <p>
+               Hi this is Sunny Sharma <br/>
+               I am just trying to create my new first blog 
+               rgteryrtuhy <br />
+               fgdgrthtryu<br />
+
+            </p>
          </div>
       );
    }
