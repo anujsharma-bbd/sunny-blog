@@ -6,19 +6,38 @@ export const asyncComponent = (importComponent) => {
       constructor(props) {
          super(props);
          this.state = {
-            component: null
+            component: null,
+            isLoading: true
          };
       }
-      async componentDidMount() {
-         const { default: component } = await importComponent();
+      // async componentDidMount() {
+      //    const { default: component } = await importComponent();
+      //    this.setState({
+      //       component: null
+      //    });
+      // }
+      // adding feature of loading/spinner untill coponent gets loaded
+      componentDidMount() {
          this.setState({
-            component: component
+            isLoading: true
          });
+         importComponent().then(({ default: component }) => {
+            this.setState({
+               component: component,
+               isLoading: false
+            });
+         }).catch((err) => {
+            this.setState({
+               component: null,
+               isLoading: false
+            });
+         });
+
       }
       render() {
-         const { component: D } = this.state;
+         const { component: D, isLoading } = this.state;
          return (
-            D ? <D {...this.props} /> : null
+            D ? <D {...this.props} /> : isLoading ? <div> loading ...</div> : null
          );
       }
 
