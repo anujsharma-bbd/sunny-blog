@@ -1,13 +1,223 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+   margin: 0;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   overflow-x: hidden;
+   background-color: #DFE0DC;
+   /* font-family: Calibri, Arial, sans-serif; */
+   font-family: Georgia, Times New Roman, Times, serif;
+   color: #666666;
+   font-size: 15px;
+}
+
+body::before {
+   background-image: url('./assets/macbook.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   content: "";
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 120%;
+   z-index: -2;
+   opacity: 0.3;
+}
+
+.short-blog, .full-blog {
+   padding-top: 9px;
+}
+
+.short-blog {
+   display: none;
+}
+
+.full-blog {
+   display: block;
+}
+
+.App-header {
+   background-color: #282c34;
+   min-height: 50px;
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: right;
+   font-size: calc(10px + 1vmin);
+   color: white;
+   position: relative;
+   width: 100%;
+}
+
+.selected-menu {
+   color: #eee;
+   padding: 16px 20px;
+   text-decoration: none;
+   background-color: green;
+}
+
+.App-header a {
+   color: #fff;
+   padding: 16px 20px;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.App-header a:hover {
+   color: #eee;
+   padding: 16px 20px;
+   text-decoration: none;
+   background-color: green;
+}
+
+.App-footer {
+   background-color: #282c34;
+   min-height: 35px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   font-size: calc(10px + 1vmin);
+   color: white;
+   bottom: 0px;
+   position: absolute;
+   right: 0px;
+   left: 0px;
+}
+
+.App-footer a {
+   color: #fff;
+   padding: 9px 20px;
+   text-decoration: none;
+}
+
+.App-link {
+   color: #61dafb;
+}
+
+.profile {
+   position: absolute;
+   left: 10px;
+   width: 30%;
+}
+
+.profile .icon {
+   height: 40px;
+   border-radius: 50%;
+   vertical-align: middle;
+   margin-right: 10px;
+   float: left;
+}
+
+.aboutus, .myjourney, .homepage {
+   margin: 0px auto;
+   width: 90%;
+}
+
+.aboutus {
+   position: relative;
+}
+
+.profile-image-large {
+   position: absolute;
+   right: 0px;
+   top: -12px;
+}
+
+.abt-header {
+   color: #333333;
+   font-size: 28px;
+}
+
+.profile-image-large img {
+   height: 80px;
+   border-radius: 50%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@media only screen and (max-width: 768px) {
+   .App-header a {
+      padding: 15px 10px;
+   }
+   .full-blog {
+      display: none;
+   }
+   .short-blog {
+      display: block;
+   }
+}
+
+.image-gallery-image {
+   text-align: center;
+   background-color: #000;
+}
+
+.image-gallery-image img {
+   width: auto!important;
+   height: 410px;
+}
+
+.slider {
+   padding: 20px 0px;
+}
+
+p {
+   margin-bottom: 1.5em;
+}
+
+@media only screen and (min-width:769px) {
+   .myjourney, .aboutus, .homepage {
+      margin: 0px auto;
+      width: 1000px;
+      padding: 10px 40px;
+   }
+   .abt-header {
+      color: #333333;
+      font-size: 48px;
+   }
+   .aboutus {
+      padding-top: 50px;
+   }
+   .profile-image-large {
+      position: absolute;
+      right: 10px;
+      top: 40px;
+   }
+   .profile-image-large img {
+      height: 500px;
+      border-radius: 50%;
+   }
+   .profile {
+      width: 20%;
+   }
+   .originalImgClass {
+      height: 500px;
+   }
+   .image-gallery-image img {
+      height: 700px;
+      width: auto!important;
+   }
+   .aboutus-text {
+      width: 600px;
+   }
+}
+
+@media all and (display-mode: fullscreen) and (min-width:769px) {
+   .originalImgClass {
+      height: 100%;
+   }
+}
+
+@media all and (display-mode: fullscreen) and (max-width:768px) {
+   .originalImgClass {
+      height: 670px;
+   }
+   .image-gallery-image img {
+      height: 610px;
+      width: 100%!important;
+   }
 }

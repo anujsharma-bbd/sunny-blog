@@ -3,10 +3,11 @@ import React from 'react';
 import "babel-polyfill";
 
 import { asyncComponent } from './shared/asyncComponent';
+import profileImg from './assets/sunny-profile.jpg';
 
-export const AsyncHome = asyncComponent(() => import('./components/home'));
-export const AsyncAboutUs = asyncComponent(() => import('./components/aboutus'));
-export const AsyncJourney = asyncComponent(() => import('./components/journey'));
+const AsyncHome = asyncComponent(() => import('./components/home'));
+const AsyncAboutUs = asyncComponent(() => import('./components/aboutus'));
+const AsyncJourney = asyncComponent(() => import('./components/journey'));
 
 class RouterCollection extends React.Component {
    render() {
@@ -14,10 +15,16 @@ class RouterCollection extends React.Component {
          <div className='router-container'>
             <Router>
                <header className="App-header">
-                  <NavLink to='/home' activeClassName="selected-menu">Home</NavLink>
-                  <NavLink to='/aboutus' activeClassName="selected-menu">About Me</NavLink>
+                  <div className="profile">
+                     <img alt="" src={profileImg} className="icon" />
+                     <div className="full-blog">Sunny&nbsp;Sharma's&nbsp;blog</div>
+                     <div className="short-blog">Sunny</div>
+                  </div>
                   <NavLink to='/Journey' activeClassName="selected-menu">My Journey</NavLink>
+                  <NavLink to='/aboutus' activeClassName="selected-menu">About Me</NavLink>
+                  <NavLink to='/home' activeClassName="selected-menu">Home</NavLink>
                </header>
+
                <div className="routes-container">
                   <Switch>
                      <Route exact path='/'>
@@ -28,9 +35,11 @@ class RouterCollection extends React.Component {
                      <Route exact path='/journey' component={AsyncJourney} />
                   </Switch>
                </div>
-               <footer className="App-footer">
-                  <Link to='/home'>copyright @ 2019</Link>
-               </footer>
+               {  /*      // <footer className="App-footer">
+               //    <Link to='/home'>copyright @ 2019</Link>
+               // </footer>
+      */
+               }
             </Router>
          </div>
       );

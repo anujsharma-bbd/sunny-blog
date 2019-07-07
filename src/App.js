@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
 import RouterCollection from './routes';
-
+import "react-image-gallery/styles/css/image-gallery.css";
 function App() {
    return (
       <div className="App">         
