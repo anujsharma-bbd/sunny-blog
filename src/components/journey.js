@@ -1,19 +1,12 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
 
+import { SlidesImages } from '../assets/slides';
+
 class JourneyComponent extends React.Component {
    constructor(props) {
       super(props);
-      const images = [];
-      for (let i = 1; i < 29; i++) {
-         images.push({
-            original: require(`../assets/slides/${i}.jpeg`),
-            thumbnail: require(`../assets/slides/thumbs/${i}_tn.jpg`),
-            desciption: 'This is my amazing Journey  :)',
-            originalClass: 'originalImgClass'
-         });
-      }
-      this.state = { images };
+      this.state = { images: SlidesImages };
    }
    render() {
       const { images } = this.state;

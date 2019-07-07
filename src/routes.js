@@ -21,17 +21,17 @@ class RouterCollection extends React.Component {
                      <div className="short-blog">Sunny</div>
                   </div>
                   <NavLink to='/Journey' activeClassName="selected-menu">My Journey</NavLink>
-                  <NavLink to='/aboutus' activeClassName="selected-menu">About Me</NavLink>
-                  <NavLink to='/home' activeClassName="selected-menu">Home</NavLink>
+                  <NavLink to='/aboutme' activeClassName="selected-menu">About Me</NavLink>
+                  { /* <NavLink to='/home' activeClassName="selected-menu">Home</NavLink> */}
                </header>
 
                <div className="routes-container">
                   <Switch>
                      <Route exact path='/'>
-                        <Redirect to="/home" />
+                        <Redirect to="/aboutme" />
                      </Route>
                      <Route exact path='/home' component={AsyncHome} />
-                     <Route exact path='/aboutus' component={AsyncAboutUs} />
+                     <Route exact path='/aboutme' component={AsyncAboutUs} />
                      <Route exact path='/journey' component={AsyncJourney} />
                   </Switch>
                </div>
