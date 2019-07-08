@@ -7,10 +7,8 @@ class AboutUs extends React.Component {
       const style2 = { fontSize: '20px', color: '#333333' };
       return (
          <div className="aboutus">
-            <h2><span className="abt-header">Hi, I'm Sunny</span></h2>
+            <h2 className="aboutus-header"><span className="abt-header">Hi, I'm Sunny</span></h2>
             <div className="aboutus-text">
-               <br />
-               <br />
                <br />
                <p><span style={style1}>I used to have a real job, but I found a way out. </span></p>
                <p><span style={style1}>My escape route was a side hustle business I built in my spare time&nbsp;— and you can do it too.</span></p>

@@ -1,4 +1,5 @@
 body {
+   all: unset;
    margin: 0;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
@@ -11,6 +12,7 @@ body {
 }
 
 body::before {
+   all: unset;
    background-image: url('./assets/macbook.jpg');
    background-size: cover;
    background-repeat: no-repeat;
@@ -26,7 +28,7 @@ body::before {
 }
 
 .short-blog, .full-blog {
-   padding-top: 9px;
+   padding-top: 7px;
 }
 
 .short-blog {
@@ -121,8 +123,12 @@ body::before {
 
 .profile-image-large {
    position: absolute;
-   right: 0px;
+   right: 10px;
    top: -12px;
+}
+
+.aboutus-header {
+   margin-top: 20px;
 }
 
 .abt-header {
@@ -187,12 +193,16 @@ p {
       color: #333333;
       font-size: 48px;
    }
+   .aboutus-header {
+      margin-top: 0px;
+      margin-bottom: 30px
+   }
    .aboutus {
       padding-top: 50px;
    }
    .profile-image-large {
       position: absolute;
-      right: 10px;
+      right: -40px;
       top: 40px;
    }
    .profile-image-large img {

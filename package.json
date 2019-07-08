@@ -4,12 +4,14 @@
    "private": true,
    "dependencies": {
       "babel-polyfill": "^6.26.0",
+      "bootstrap": "^4.3.1",
       "gh-pages": "^2.0.1",
       "react": "^16.8.6",
       "react-dom": "^16.8.6",
       "react-image-gallery": "^0.8.18",
       "react-router-dom": "^5.0.1",
-      "react-scripts": "3.0.1"
+      "react-scripts": "3.0.1",
+      "reactstrap": "^8.0.0"
    },
    "scripts": {
       "start": "react-scripts start",
