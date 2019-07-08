@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch, Redirect, Link, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Redirect, Link, NavLink } from 'react-router-dom';
 import React from 'react';
 import "babel-polyfill";
 
@@ -22,13 +22,13 @@ class RouterCollection extends React.Component {
                   </div>
                   <NavLink to='/Journey' activeClassName="selected-menu">My Journey</NavLink>
                   <NavLink to='/aboutme' activeClassName="selected-menu">About Me</NavLink>
-                  { /* <NavLink to='/home' activeClassName="selected-menu">Home</NavLink> */}
+                  <NavLink to='/home' activeClassName="selected-menu">Home</NavLink>
                </header>
 
                <div className="routes-container">
                   <Switch>
                      <Route exact path='/'>
-                        <Redirect to="/aboutme" />
+                        <Redirect to="/home" />
                      </Route>
                      <Route exact path='/home' component={AsyncHome} />
                      <Route exact path='/aboutme' component={AsyncAboutUs} />

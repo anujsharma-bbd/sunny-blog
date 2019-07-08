@@ -169,6 +169,14 @@ p {
    margin-bottom: 1.5em;
 }
 
+.thumbImgClass img {
+   border-radius: 6px;
+}
+
+.image-gallery-thumbnail.active {
+   border-radius: 10px;
+}
+
 @media only screen and (min-width:769px) {
    .myjourney, .aboutus, .homepage {
       margin: 0px auto;
