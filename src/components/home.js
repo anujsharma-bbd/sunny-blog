@@ -35,6 +35,7 @@ class HomeComponent extends React.Component {
    }
    render() {
       const { matrix } = this.state;
+      let counter = -1;
       return (
          <div className="homepage">
             {
@@ -75,10 +76,11 @@ class HomeComponent extends React.Component {
                      <div className="row" key={index + "-top-row-matrix"}>
                         {
                            arr.map((item, ind) => {
+                              counter++;
                               return (
-                                 <div className="col-sm-4 pt-4" key={(ind + index) + "-second-row-matrix"}>
+                                 <div className="col-sm-4 pt-4" key={counter + "-second-row-matrix"}>
                                     <Card>
-                                       <CardHeader tag="h6" className={`blog${((ind + index) + 1)}-header`}></CardHeader>
+                                       <CardHeader tag="h6" className={`blog${counter + 1}-header`}></CardHeader>
                                        <CardBody>
                                           <CardTitle>
                                              <span title={item.qoute}>
