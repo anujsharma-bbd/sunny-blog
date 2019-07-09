@@ -46,7 +46,7 @@ body::before {
    flex-direction: row-reverse;
    align-items: center;
    justify-content: right;
-   font-size: calc(10px + 1vmin);
+   font-size: calc(8px + 1vmin);
    color: white;
    position: relative;
    width: 100%;
@@ -112,7 +112,7 @@ body::before {
    float: left;
 }
 
-.aboutus, .myjourney, .homepage {
+.aboutus, .myjourney, .homepage, .contactus {
    margin: 0px auto;
    width: 90%;
 }
@@ -282,14 +282,26 @@ p {
 }
 
 @media only screen and (min-width:769px) {
-   .myjourney, .aboutus, .homepage {
+   .App-header{
+      font-size: calc(10px + 1vmin);
+   }
+   .myjourney, .aboutus, .homepage, .contactus {
       margin: 0px auto;
       width: 1000px;
       padding: 10px 40px;
    }
+   .contactus {
+      margin: 0px auto;
+      width: 800px;
+      padding: 10px 40px;
+   }
    .abt-header {
       color: #333333;
-      font-size: 48px;
+      font-size: 38px;
+   }
+   .cnt-header {
+      color: #333333;
+      font-size: 38px;
    }
    .aboutus-header {
       margin-top: 0px;
@@ -364,4 +376,7 @@ p {
    padding: 15px!important;
    background-color: rgba(0, 0, 0, .2)!important;
    opacity: 0.7!important;
+}
+.contactus input,.contactus textarea{
+   border: 1px solid #495057!important;
 }

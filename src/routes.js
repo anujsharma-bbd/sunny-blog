@@ -8,6 +8,7 @@ import profileImg from './assets/sunny-profile.jpg';
 const AsyncHome = asyncComponent(() => import('./components/home'));
 const AsyncAboutUs = asyncComponent(() => import('./components/aboutus'));
 const AsyncJourney = asyncComponent(() => import('./components/journey'));
+const AsyncContactUs = asyncComponent(() => import('./components/contactus'));
 
 class RouterCollection extends React.Component {
    render() {
@@ -20,7 +21,8 @@ class RouterCollection extends React.Component {
                      <div className="full-blog">Sunny&nbsp;Sharma's&nbsp;blog</div>
                      <div className="short-blog">Sunny</div>
                   </div>
-                  <NavLink to='/Journey' exact activeClassName="selected-menu">My Journey</NavLink>
+                  <NavLink to='/contactus' exact activeClassName="selected-menu">Contact Us</NavLink>
+                  <NavLink to='/journey' exact activeClassName="selected-menu">Journey</NavLink>
                   <NavLink to='/aboutme' exact activeClassName="selected-menu">About Me</NavLink>
                   <NavLink to='/' exact activeClassName="selected-menu">Home</NavLink>
                </header>
@@ -30,6 +32,7 @@ class RouterCollection extends React.Component {
                      <Route exact path='/' component={AsyncHome} />
                      <Route exact path='/aboutme' component={AsyncAboutUs} />
                      <Route exact path='/journey' component={AsyncJourney} />
+                     <Route exact path='/contactus' component={AsyncContactUs} />
                   </Switch>
                </div>
                {  /*      // <footer className="App-footer">
