@@ -1,17 +1,8 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import { Card, Button, CardHeader, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Card, Button, CardHeader, CardBody, CardTitle, CardText, Spinner } from 'reactstrap';
 import { Carousel } from 'react-responsive-carousel';
-import blog1 from '../assets/homeSlider/blog1.png';
-import blog2 from '../assets/homeSlider/blog2.jpg';
-import blog3 from '../assets/homeSlider/blog3.jpg';
-import blog4 from '../assets/homeSlider/blog4.jpg';
-import blog5 from '../assets/homeSlider/blog5.jpg';
-import blog6 from '../assets/homeSlider/blog6.jpg';
-import blog7 from '../assets/homeSlider/blog7.jpg';
-import blog8 from '../assets/homeSlider/blog8.jpg';
-import blog9 from '../assets/homeSlider/blog9.jpg';
 class HomeComponent extends React.Component {
    constructor(props) {
       super(props);
@@ -46,6 +37,13 @@ class HomeComponent extends React.Component {
       const { matrix } = this.state;
       return (
          <div className="homepage">
+            {
+               (matrix.length === 0) ?
+                  <div className="text-center pt-6">
+                     <Spinner color="primary" />
+                  </div>
+                  : null
+            }
             <div className="row pt-3">
                <div className="col-sm-12">
                   <Carousel infiniteLoop={true} autoPlay={true} centerMode={false} showStatus={false}
@@ -104,6 +102,7 @@ class HomeComponent extends React.Component {
                   )
                })
             }
+
          </div>
       );
    }
