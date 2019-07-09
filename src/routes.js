@@ -20,9 +20,9 @@ class RouterCollection extends React.Component {
                      <div className="full-blog">Sunny&nbsp;Sharma's&nbsp;blog</div>
                      <div className="short-blog">Sunny</div>
                   </div>
-                  <NavLink to='/Journey' activeClassName="selected-menu">My Journey</NavLink>
-                  <NavLink to='/aboutme' activeClassName="selected-menu">About Me</NavLink>
-                  <NavLink to='/' activeClassName="selected-menu">Home</NavLink>
+                  <NavLink to='/Journey' exact activeClassName="selected-menu">My Journey</NavLink>
+                  <NavLink to='/aboutme' exact activeClassName="selected-menu">About Me</NavLink>
+                  <NavLink to='/' exact activeClassName="selected-menu">Home</NavLink>
                </header>
 
                <div className="routes-container">

@@ -46,60 +46,28 @@ class HomeComponent extends React.Component {
       const { matrix } = this.state;
       return (
          <div className="homepage">
-            <div className="row">
+            <div className="row pt-3">
                <div className="col-sm-12">
                   <Carousel infiniteLoop={true} autoPlay={true} centerMode={false} showStatus={false}
                      showThumbs={false} useKeyboardArrows={true}>
-                     <div>
-                        <img alt="" src={blog1} height="550px" />
-                        <p className="legend">“Don’t worry about failure; you only have to be right once.”</p>
-                     </div>
-                     <div>
-                        <img alt="" src={blog2} height="550px" />
-                        <p className="legend">“In this ever-changing society, the most powerful and enduring brands are built from the heart. They are real and sustainable. Their foundations are stronger because they are built with the strength of the human spirit, not an ad campaign. The companies that are lasting are those that are authentic.”</p>
-                     </div>
-                     <div>
-                        <img alt="" src={blog3} height="550px" />
-                        <p className="legend">
-                           “You can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something—your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.”
-                        </p>
-                     </div>
-                     <div>
-                        <img alt="" src={blog4} height="550px" />
-                        <p className="legend">
-                           “Experience has taught me a few things. One is to listen to your gut, no matter how good something sounds on paper. The second is that you’re generally better off sticking with what you know. And the third, is that sometimes your best investments are the ones you don’t make.”
-                        </p>
-                     </div>
-                     <div>
-                        <img alt="" src={blog5} height="550px" />
-                        <p className="legend">
-                           “There’s an entrepreneur right now, scared to death, making excuses, saying, ‘It’s not the right time just yet.’ There’s no such thing as a good time. I started an apparel-manufacturing business in the tech-boom years. I mean, come on. Get out of your garage and go take a chance and start you business.”
-                        </p>
-                     </div>
-                     <div>
-                        <img alt="" src={blog6} height="550px" />
-                        <p className="legend">
-                           “It takes humility to realize that we don’t know everything, not to rest on our laurels, and to know that we must keep learning and observing. If we don’t, we can be sure some startup will be there to take our place.”
-                        </p>
-                     </div>
-                     <div>
-                        <img alt="" src={blog7} height="550px" />
-                        <p className="legend">
-                           “Lots of companies don’t succeed over time. What do they fundamentally do wrong? They usually miss the future.”
-                        </p>
-                     </div>
-                     <div>
-                        <img alt="" src={blog8} height="550px" />
-                        <p className="legend">
-                           “The thing that I learned early on is you really need to set goals in your life, both short-term and long-term, just like you do in business. Having that long-term goal will enable you to have a plan on how to achieve it. We apply these skills in business, yet when it comes to ourselves, we rarely apply them.”
-                        </p>
-                     </div>
-                     <div>
-                        <img alt="" src={blog9} height="550px" />
-                        <p className="legend">
-                           “The distance between number one and number two is always a constant. If you want to improve the organization, you have to improve yourself and the organization gets pulled up with you. That is a big lesson. I cannot just expect the organization to improve if I don’t improve myself and lift the organization, because that distance is a constant.”
-                        </p>
-                     </div>
+                     {
+                        matrix.map((arr, index) => {
+                           return (
+                              arr.map((item, ind) => {
+                                 return (
+                                    <div key={(ind + index) + "-seconcarousel-row-matrix"}>
+                                       <img alt="" src={item.src} height="550px" />
+                                       <p className="legend">
+                                          {
+                                             item.qoute
+                                          }
+                                       </p>
+                                    </div>
+                                 );
+                              })
+                           );
+                        })
+                     }
                   </Carousel>
                </div>
             </div>
