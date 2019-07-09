@@ -4,7 +4,7 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    overflow-x: hidden;
-   background-color: #DFE0DC;
+   background-color: #dbdcd9!important;
    /* font-family: Calibri, Arial, sans-serif; */
    font-family: Georgia, Times New Roman, Times, serif;
    color: #666666;
@@ -181,6 +181,95 @@ p {
 
 .image-gallery-thumbnail.active {
    border-radius: 10px;
+}
+
+.blog1-header {
+   width: 100%;
+   height: 200px;
+   background: url(./assets/blog1.jpg);
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+
+.blog2-header {
+   width: 100%;
+   height: 200px;
+   background: url(./assets/blog2.jpg);
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+
+.blog3-header {
+   width: 100%;
+   height: 200px;
+   background: url(./assets/blog3.jpg);
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+.blog4-header {
+   width: 100%;
+   height: 200px;
+   background: url(./assets/blog4.jpg);
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+.blog5-header {
+   width: 100%;
+   height: 200px;
+   background: url(./assets/blog5.jpg);
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+.blog6-header {
+   width: 100%;
+   height: 200px;
+   background: url(./assets/blog6.jpg);
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+.blog7-header {
+   width: 100%;
+   height: 200px;
+   background: url(./assets/blog7.jpg);
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+.blog8-header {
+   width: 100%;
+   height: 200px;
+   background: url(./assets/blog8.jpg);
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+.blog9-header {
+   width: 100%;
+   height: 200px;
+   background: url(./assets/blog9.jpg);
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+.card-text-custom {
+   font-size: 12px;
+   line-height: 1.9;
+   color: #555;
+   padding-bottom: 5px;
+}
+.card-title{
+   margin-bottom: 5px;
+}
+.founder-text{
+   color: #ccc;
+   font-style: italic;
+   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:769px) {
