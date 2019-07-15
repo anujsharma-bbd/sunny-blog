@@ -7,7 +7,7 @@ body {
    background-color: #dbdcd9!important;
    /* font-family: Calibri, Arial, sans-serif; */
    font-family: Georgia, Times New Roman, Times, serif;
-   color: #666666;
+   color: #666666!important;
    font-size: 15px;
 }
 
@@ -443,7 +443,8 @@ p {
    border-radius: 6px;
    box-shadow: 2px 2px #ccc;
 }
-.google-adword h2{
+
+.google-adword h2 {
    margin: 20px 0px;
 }
 
@@ -451,9 +452,11 @@ ol, ul {
    margin-top: 0;
    margin-bottom: 1rem;
 }
+
 .google-adword {
    font-size: 1.25rem;
 }
+
 .google-adword strong {
    font-weight: 700;
 }
@@ -465,4 +468,69 @@ ol, ul {
 
 .contactus input, .contactus textarea {
    border: 1px solid #495057!important;
+}
+
+.hsg-featured-snippet {
+   width: 100%;
+   position: relative;
+   padding: 2.75rem;
+   right: 2.75rem;
+}
+
+.hsg-featured-snippet, .hsg-featured-snippet h2 {
+   border-radius: .1875rem;
+}
+
+.hsg-featured-snippet {
+   box-sizing: content-box;
+   margin-left: auto;
+   max-width: 895px;
+   margin-right: auto;
+}
+
+.hsg-rich-text ul, .hsg-rich-text ol {
+   margin: 1em 0 0.25em;
+   padding: 0;
+}
+
+.hsg-rich-text ol {
+   counter-reset: item;
+}
+
+.hsg-rich-text ol>li {
+   counter-increment: item;
+   text-indent: -2em;
+}
+
+.hsg-rich-text ul li, .hsg-rich-text ol li {
+   list-style-type: none;
+   margin: 1em 0 0.25em 1em;
+   padding: 10px 0 0 1.5em;
+}
+
+.hsg-rich-text ol>li::before, .hsg-rich-text ol>li::before {
+   content: counter(item) ".";
+   display: inline-block;
+   color: #2d3e50;
+   font-weight: 700;
+   text-align: right;
+   width: 1.5em;
+   padding-right: 0.5em;
+}
+
+.hsg-rich-text ul li::before, .hsg-rich-text ul li::before {
+   content: '';
+   display: inline-block;
+   position: relative;
+   top: -0.1em;
+   left: -0.875em;
+   background-color: #2d3e50;
+   border-radius: 50%;
+   width: 6px;
+   height: 6px;
+}
+
+.youtube-frame {
+   width: 100%;
+   height: 400px;
 }

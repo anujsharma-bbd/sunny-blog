@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Switch, Route } from 'react-router-dom';
+import { NavLink, Switch, Route, Redirect } from 'react-router-dom';
 import { asyncComponent } from '../shared/asyncComponent';
 
 const AsyncDigitalMarketing = asyncComponent(() => import('./sub-components/digital-marketing'));
@@ -27,6 +27,9 @@ class Marketings extends React.Component {
             </ul>
             <div className="marketings-section">
                <Switch>
+                  <Route exact path={`${match.path}`}>
+                     <Redirect to={`${match.path}/what-is-digital-marketing`} />
+                  </Route>
                   <Route path={`${match.path}/what-is-digital-marketing`} component={AsyncDigitalMarketing} />
                   <Route path={`${match.path}/what-is-google-adwords`} component={AsyncGAdsMarketing} />
                </Switch>
