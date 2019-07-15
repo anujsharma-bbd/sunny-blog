@@ -39,6 +39,59 @@ body::before {
    display: block;
 }
 
+.services-links {
+   margin: 0px;
+   padding: 0px 0px 0px 27px;
+   list-style: none;
+   font-size: 20px;
+}
+
+.services-links a {
+   color: #000;
+   position: relative;
+}
+
+.services-links a:hover {
+   text-decoration: none;
+}
+
+.services-links a::before {
+   content: '>';
+   font-size: 30px;
+   margin-right: 13px;
+   /* margin-top: 11px; */
+   padding-top: 10px;
+   position: absolute;
+   top: -19px;
+   left: -30px;
+}
+
+a.selected-sub-menu {
+   color: #0056b3;
+   font-weight: bold;
+}
+
+.entry-header {
+   background: #00cad3;
+   background-image: linear-gradient(to left, #00cad3, #009688);
+   border-radius: 6px;
+}
+
+img.trend1 {
+   width: 100%;
+}
+
+.flow-steps {
+   width: 100%;
+   height: 400px;
+}
+
+.marketings-section {
+   padding: 20px 0px;
+   border-top: 1px solid #ccc;
+   margin-top: 30px;
+}
+
 .App-header {
    background-color: #282c34;
    min-height: 50px;
@@ -46,7 +99,7 @@ body::before {
    flex-direction: row-reverse;
    align-items: center;
    justify-content: right;
-   font-size: calc(8px + 1vmin);
+   font-size: calc(7px + 1vmin);
    color: white;
    position: relative;
    width: 100%;
@@ -112,7 +165,7 @@ body::before {
    float: left;
 }
 
-.aboutus, .myjourney, .homepage, .contactus {
+.aboutus, .myjourney, .homepage, .contactus, .services {
    margin: 0px auto;
    width: 90%;
 }
@@ -147,7 +200,7 @@ code {
 
 @media only screen and (max-width: 768px) {
    .App-header a {
-      padding: 15px 10px;
+      padding: 15px 4px;
    }
    .full-blog {
       display: none;
@@ -282,10 +335,10 @@ p {
 }
 
 @media only screen and (min-width:769px) {
-   .App-header{
+   .App-header {
       font-size: calc(10px + 1vmin);
    }
-   .myjourney, .aboutus, .homepage, .contactus {
+   .myjourney, .aboutus, .homepage, .contactus, .services {
       margin: 0px auto;
       width: 1000px;
       padding: 10px 40px;
@@ -332,6 +385,10 @@ p {
    .aboutus-text {
       width: 600px;
    }
+   .flow-steps {
+      width: 900px;
+      height: 998px;
+   }
 }
 
 @media all and (display-mode: fullscreen) and (min-width:769px) {
@@ -377,6 +434,35 @@ p {
    background-color: rgba(0, 0, 0, .2)!important;
    opacity: 0.7!important;
 }
-.contactus input,.contactus textarea{
+
+.trend2 {
+   width: 70%;
+}
+
+.google-adword img {
+   border-radius: 6px;
+   box-shadow: 2px 2px #ccc;
+}
+.google-adword h2{
+   margin: 20px 0px;
+}
+
+ol, ul {
+   margin-top: 0;
+   margin-bottom: 1rem;
+}
+.google-adword {
+   font-size: 1.25rem;
+}
+.google-adword strong {
+   font-weight: 700;
+}
+
+.google-adword h1 strong, .google-adword h2 strong, .google-adword h3 strong, .google-adword h4 strong {
+   font-weight: 600!important;
+   margin-bottom: 1rem!important;
+}
+
+.contactus input, .contactus textarea {
    border: 1px solid #495057!important;
 }

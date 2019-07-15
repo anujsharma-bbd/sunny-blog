@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Switch, Redirect, Link, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 import React from 'react';
 import "babel-polyfill";
 
@@ -9,6 +9,7 @@ const AsyncHome = asyncComponent(() => import('./components/home'));
 const AsyncAboutUs = asyncComponent(() => import('./components/aboutus'));
 const AsyncJourney = asyncComponent(() => import('./components/journey'));
 const AsyncContactUs = asyncComponent(() => import('./components/contactus'));
+const AsyncMarketing = asyncComponent(() => import('./components/marketing'));
 
 class RouterCollection extends React.Component {
    render() {
@@ -21,6 +22,7 @@ class RouterCollection extends React.Component {
                      <div className="full-blog">Sunny&nbsp;Sharma's&nbsp;blog</div>
                      <div className="short-blog">Sunny</div>
                   </div>
+                  <NavLink to='/marketings' exact activeClassName="selected-menu">Marketing</NavLink>
                   <NavLink to='/contactus' exact activeClassName="selected-menu">Contact Us</NavLink>
                   <NavLink to='/journey' exact activeClassName="selected-menu">Journey</NavLink>
                   <NavLink to='/aboutme' exact activeClassName="selected-menu">About Me</NavLink>
@@ -33,6 +35,7 @@ class RouterCollection extends React.Component {
                      <Route exact path='/aboutme' component={AsyncAboutUs} />
                      <Route exact path='/journey' component={AsyncJourney} />
                      <Route exact path='/contactus' component={AsyncContactUs} />
+                     <Route path='/marketings' component={AsyncMarketing} />
                   </Switch>
                </div>
                {  /*      // <footer className="App-footer">
