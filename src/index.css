@@ -44,6 +44,17 @@ body::before {
    padding: 0px 0px 0px 27px;
    list-style: none;
    font-size: 20px;
+   line-height: 40px;
+}
+
+.got-to-sections span {
+   color: #000;
+}
+
+.got-to-sections span:hover {
+   text-decoration: underline;
+   cursor: pointer;
+   color: #0056b3;
 }
 
 .services-links a {

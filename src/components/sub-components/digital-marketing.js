@@ -1,8 +1,13 @@
 import React from 'react';
+import ScrollableAnchor, { goToAnchor } from 'react-scrollable-anchor'
 
 class DigitalMarketing extends React.Component {
    constructor(props) {
       super(props);
+      this.gotToSection = this.gotToSection.bind(this);
+   }
+   gotToSection(sectionname) {
+      goToAnchor(sectionname);
    }
    render() {
       return (
@@ -12,33 +17,30 @@ class DigitalMarketing extends React.Component {
                   <h1 className="entry-title pb-5 pt-5 text-center">What Is Digital Marketing?</h1>
                </div>
             </header>
+            <br />
             <p>With how accessible the internet is today, would you believe me if I told you the number of people who go online every day is still increasing?</p>
             <p>It is. In fact, "constant" internet usage among adults increased by 5% in just the last three years, according to Pew Research. And although we say it a lot, the way people shop and buy really has changed along with it -- meaning offline marketing isn't as effective as it used to be.</p>
             <p>Marketing has always been about connecting with your audience in the right place and at the right time. Today, that means you need to meet them where they are already spending time: on the internet.</p>
             <p>Enter digital marketing -- in other words, any form of marketing that exists online.</p>
             <p> we talk a lot about inbound marketing as a really effective way to attract, engage, and delight customers online. But we still get a lot of questions from people all around the world about digital marketing. So, we decided to answer them. Click the links below to jump to each question, or keep reading to see how digital marketing is carries out today.</p>
-            <ul>
-               <li><a href="#whatis">What is digital marketing?</a></li>
-               <li><a href="#examples">Digital Marketing Examples</a></li>
-               <li><a href="#marketer">What does a digital marketer do?</a></li>
-               <li><a href="#versus">Inbound Marketing vs. Digital Marketing: Which is it?</a></li>
-               <li><a href="#doesitwork">Does digital marketing work for all businesses?</a></li>
-               <li><a href="#roleof">What is the role of digital marketing to a company?</a></li>
-               <li><a href="#typesof">What types of digital content should I create?</a></li>
-               <li><a href="#howlong">How long will it take to see results from my content?</a></li>
-               <li><a href="#budget">Do I need a big budget for digital marketing?</a></li>
-               <li><a href="#mobile">How does mobile marketing fit into my digital marketing strategy?</a></li>
-               <li><a href="#nowwhat">I'm ready to try digital marketing. Now what?</a></li>
+            <ul className="got-to-sections">
+               <li><span onClick={() => this.gotToSection('whatis')}>What is digital marketing?</span></li>
+               <li><span href="#examples">Digital Marketing Examples</span></li>
+               <li><span href="#marketer">What does a digital marketer do?</span></li>
+               <li><span href="#versus">Inbound Marketing vs. Digital Marketing: Which is it?</span></li>
+               <li><span href="#doesitwork">Does digital marketing work for all businesses?</span></li>
+               <li><span href="#roleof">What is the role of digital marketing to a company?</span></li>
+               <li><span href="#typesof">What types of digital content should I create?</span></li>
+               <li><span href="#howlong">How long will it take to see results from my content?</span></li>
+               <li><span href="#budget">Do I need a big budget for digital marketing?</span></li>
+               <li><span href="#mobile">How does mobile marketing fit into my digital marketing strategy?</span></li>
+               <li><span href="#nowwhat">I'm ready to try digital marketing. Now what?</span></li>
             </ul>
-            <br />
-            <p>So, how do you define digital marketing today?</p>
             <div className="hsg-featured-snippet">
-               <div className="hsg-featured-snippet__wrapper">
-                  <h2>What is digital marketing?</h2>
-                  <div className="hsg-featured-snippet__wrapper--content" data-type="paragraph">
-                     <p>Digital marketing encompasses all marketing efforts that use an electronic device or the internet. Businesses leverage digital channels such as search engines, social media, email, and other websites to connect with current and prospective customers.</p>
-                  </div>
-               </div>
+               <div>So, how do you define digital marketing today?</div>
+               <br />
+               <h2>What is digital marketing?</h2>
+               <p>Digital marketing encompasses all marketing efforts that use an electronic device or the internet. Businesses leverage digital channels such as search engines, social media, email, and other websites to connect with current and prospective customers.</p>
             </div>
             <p>
                A seasoned inbound marketer might say inbound marketing and digital marketing are virtually the same thing, but there are some minor differences. And conversations with marketers and business owners in the U.S., U.K., Asia, Australia, and New Zealand, I've learned a lot about how those small differences are being observed across the world.
@@ -65,7 +67,7 @@ class DigitalMarketing extends React.Component {
             <ul>
                <li><strong>On page SEO:</strong> This type of SEO focuses on all of the content that exists "on the page" when looking at a website. By researching keywords for their search volume and intent (or meaning), you can answer questions for readers&nbsp;and rank&nbsp;higher on the search engine results pages (SERPs) those questions produce.</li>
                <li><strong>Off page SEO:</strong> This type of SEO focuses on all of the activity that takes place "off the page" when looking to optimize your website. "What activity not on my own website could affect my ranking?" You might ask. The answer is inbound links, also known as backlinks. The number of publishers that link to you, and the relative "authority" of those publishers, affect how highly you rank for the keywords you care about. By networking with other publishers, writing guest posts on these websites&nbsp;(and&nbsp;linking back to your website), and&nbsp;generating external attention, you can earn the backlinks you need to move your website up on all&nbsp;the right SERPs.</li>
-               <li><strong>Technical SEO:</strong> This type of SEO focuses on the backend of your website, and how your pages are coded. Image compression, structured data, and CSS file optimization are all forms of technical SEO that can <a href="/marketing/reduce-http-requests" rel=" noopener" target="_blank">increase your website's loading speed</a> -- an important ranking factor in the eyes of search engines like Google.</li>
+               <li><strong>Technical SEO:</strong> This type of SEO focuses on the backend of your website, and how your pages are coded. Image compression, structured data, and CSS file optimization are all forms of technical SEO that can increase your website's loading speed -- an important ranking factor in the eyes of search engines like Google.</li>
             </ul>
             <h3>Content Marketing</h3>
             <p>This term denotes the creation and promotion of content assets for the purpose of generating brand awareness, traffic growth, lead generation, and customers. The channels that can play a part in your content marketing strategy include:</p>
