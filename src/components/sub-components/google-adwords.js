@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 
 import imgTrend1 from '../../assets/google-trends-1.png';
 import SearchAds from '../../assets/Search-ads.png';
@@ -21,6 +22,11 @@ class GoogleAdword extends React.Component {
    render() {
       return (
          <div className="google-adword">
+            <Helmet>
+               <meta charSet="utf-8" />
+               <title>What is Google Adwords?</title>
+               <link rel="canonical" href="http://blogdekho.co.in/marketings/what-is-google-adwords" />
+            </Helmet>
             <header className="entry-header pt60 pb60">
                <div className="container">
                   <h1 className="entry-title pb-5 pt-5 text-center">What is Google AdWords?</h1>

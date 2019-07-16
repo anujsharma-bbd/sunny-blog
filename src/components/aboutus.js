@@ -1,12 +1,19 @@
 import React from 'react';
 
 import aboutMeImage from '../assets/aboutme.jpeg';
+import { Helmet } from "react-helmet";
+
 class AboutUs extends React.Component {
    render() {
       const style1 = { fontSize: '20px', lineHeight: '32px', color: '#333333' };
       const style2 = { fontSize: '20px', color: '#333333' };
       return (
          <div className="aboutus">
+            <Helmet>
+               <meta charSet="utf-8" />
+               <title>About Me</title>
+               <link rel="canonical" href="http://blogdekho.co.in/aboutme" />
+            </Helmet>
             <h2 className="aboutus-header"><span className="abt-header">Hi, I'm Sunny</span></h2>
             <div className="aboutus-text">
                <br />

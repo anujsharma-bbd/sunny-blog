@@ -1,5 +1,7 @@
 import React from 'react';
 import { Input } from 'reactstrap';
+import { Helmet } from "react-helmet";
+
 class ContactUs extends React.Component {
    constructor(props) {
       super(props);
@@ -35,6 +37,11 @@ class ContactUs extends React.Component {
       const { name, email, message, validname, validemail, validmessage } = this.state;
       return (
          <div className="contactus">
+            <Helmet>
+               <meta charSet="utf-8" />
+               <title>Contact Us</title>
+               <link rel="canonical" href="http://blogdekho.co.in/contactus" />
+            </Helmet>
             <br />
             <h2><span className="cnt-header">Contact Us</span></h2>
             <br />

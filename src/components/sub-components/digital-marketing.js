@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import digimarketing from '../../assets/digimarketing.jpeg';
+import { Helmet } from "react-helmet";
 
 class DigitalMarketing extends React.Component {
    constructor(props) {
@@ -16,6 +17,11 @@ class DigitalMarketing extends React.Component {
    render() {
       return (
          <div className="digital-marketing hsg-rich-text">
+            <Helmet>
+               <meta charSet="utf-8" />
+               <title>What is Digital Marketing?</title>
+               <link rel="canonical" href="http://blogdekho.co.in/marketings/what-is-digital-marketing" />
+            </Helmet>
             <header className="entry-header pt60 pb60">
                <div className="container">
                   <h1 className="entry-title pb-5 pt-5 text-center">What Is Digital Marketing?</h1>

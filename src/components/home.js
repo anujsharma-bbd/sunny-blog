@@ -1,5 +1,6 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Helmet } from "react-helmet";
 
 import { Card, Button, CardHeader, CardBody, CardTitle, CardText, Spinner } from 'reactstrap';
 import { Carousel } from 'react-responsive-carousel';
@@ -38,6 +39,11 @@ class HomeComponent extends React.Component {
       let counter = -1;
       return (
          <div className="homepage">
+            <Helmet>
+               <meta charSet="utf-8" />
+               <title>Blog Dekho | Sunny Sharma's Blog</title>
+               <link rel="canonical" href="http://blogdekho.co.in/" />
+            </Helmet>
             {
                (matrix.length === 0) ?
                   <div className="text-center pt-6">
