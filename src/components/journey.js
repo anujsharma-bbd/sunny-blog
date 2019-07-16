@@ -3,6 +3,7 @@ import ImageGallery from 'react-image-gallery';
 
 import { SlidesImages } from '../assets/slides';
 import { Helmet } from "react-helmet";
+import DisqusCommentsComponent from '../shared/disqusComponent';
 
 class JourneyComponent extends React.Component {
    constructor(props) {
@@ -27,6 +28,12 @@ class JourneyComponent extends React.Component {
             </div>
             <div className="slider">
                <ImageGallery items={images} />
+            </div>
+            <br />
+            <hr />
+            <br />
+            <div>
+               <DisqusCommentsComponent disqusId={'blogdekho-co-in'} />
             </div>
          </div>
       );

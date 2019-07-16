@@ -2,6 +2,7 @@ import React from 'react';
 
 import aboutMeImage from '../assets/aboutme.jpeg';
 import { Helmet } from "react-helmet";
+import DisqusCommentsComponent from '../shared/disqusComponent';
 
 class AboutUs extends React.Component {
    render() {
@@ -24,6 +25,12 @@ class AboutUs extends React.Component {
             </div>
             <div className="profile-image-large">
                <img alt="" src={aboutMeImage} />
+            </div>
+            <br />
+            <hr />
+            <br />
+            <div>
+               <DisqusCommentsComponent disqusId={'blogdekho-co-in'} />
             </div>
          </div>
       );

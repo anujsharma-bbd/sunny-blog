@@ -14,6 +14,7 @@ import gAds from '../../assets/google-adwords.jpeg';
 import campaign3 from '../../assets/almarai-800x225.png';
 import universaladd from '../../assets/universal-app-ads.png'
 import appcampaign from '../../assets/kcb-app-campaign-800x310.png'
+import DisqusCommentsComponent from '../../shared/disqusComponent';
 
 class GoogleAdword extends React.Component {
    constructor(props) {
@@ -143,6 +144,12 @@ class GoogleAdword extends React.Component {
             </p>
             <h2><strong>Conclusion:</strong></h2>
             <p>So,&nbsp;now you know what Google AdWords is, and the types of ads that are available for you to run. My&nbsp;next chapter will give you solid reasons to start with Google ads right away and to improve your ROI using them.</p>
+            <br />
+            <hr />
+            <br />
+            <div>
+               <DisqusCommentsComponent disqusId={'googleadwords-topic'} />
+            </div>
          </div>
       );
    }

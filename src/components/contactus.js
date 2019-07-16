@@ -1,6 +1,7 @@
 import React from 'react';
 import { Input } from 'reactstrap';
 import { Helmet } from "react-helmet";
+import DisqusCommentsComponent from '../shared/disqusComponent';
 
 class ContactUs extends React.Component {
    constructor(props) {
@@ -84,6 +85,12 @@ class ContactUs extends React.Component {
                   </div>
                </div>
             </form>
+            <br />
+            <hr />
+            <br />
+            <div>
+               <DisqusCommentsComponent disqusId={'blogdekho-co-in'} />
+            </div>
          </div>
       );
    }

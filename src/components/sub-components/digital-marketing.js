@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import digimarketing from '../../assets/digimarketing.jpeg';
 import { Helmet } from "react-helmet";
+import DisqusCommentsComponent from '../../shared/disqusComponent';
 
 class DigitalMarketing extends React.Component {
    constructor(props) {
@@ -258,6 +259,12 @@ class DigitalMarketing extends React.Component {
             <br /><h2 ref="nowwhat">I'm ready to try digital marketing. Now what?</h2>
             <p>If you're already doing digital marketing, it's likely that you're at least reaching some segments of your audience online. No doubt you can think of some areas of your strategy that could use a little improvement, though.</p>
             <p>That's why we created <em>Why Digital Marketing? The Essential Guide to Marketing Your Brand Online</em> -- a step-by-step guide to help you build a digital marketing strategy that's truly effective, whether you're a complete beginner or have a little more experience. You can download it for free here.</p>
+            <br />
+            <hr/>
+            <br/>
+            <div>
+               <DisqusCommentsComponent disqusId={'digitalmarketing-topic'} />
+            </div>
          </div>
       );
    }

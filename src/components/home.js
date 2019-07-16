@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 
 import { Card, Button, CardHeader, CardBody, CardTitle, CardText, Spinner } from 'reactstrap';
 import { Carousel } from 'react-responsive-carousel';
+import DisqusCommentsComponent from '../shared/disqusComponent';
 class HomeComponent extends React.Component {
    constructor(props) {
       super(props);
@@ -110,7 +111,12 @@ class HomeComponent extends React.Component {
                   )
                })
             }
-
+            <br />
+            <hr />
+            <br />
+            <div>
+               <DisqusCommentsComponent disqusId={'blogdekho-co-in'} />
+            </div>
          </div>
       );
    }
