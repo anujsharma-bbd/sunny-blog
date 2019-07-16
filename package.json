@@ -12,7 +12,6 @@
       "react-responsive-carousel": "^3.1.49",
       "react-router-dom": "^5.0.1",
       "react-scripts": "3.0.1",
-      "react-scrollable-anchor": "^0.6.1",
       "reactstrap": "^8.0.0"
    },
    "scripts": {

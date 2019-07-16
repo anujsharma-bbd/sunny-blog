@@ -19,10 +19,10 @@ class Marketings extends React.Component {
             <br />
             <ul className="services-links">
                <li>
-                  <NavLink to={`${match.path}/what-is-digital-marketing`} exact activeClassName="selected-sub-menu">what is digital marketing?</NavLink>
+                  <NavLink to={`${match.path}/what-is-digital-marketing`} exact activeClassName="selected-service-links">what is digital marketing?</NavLink>
                </li>
                <li>
-                  <NavLink to={`${match.path}/what-is-google-adwords`} exact activeClassName="selected-sub-menu">what is google adwords?</NavLink>
+                  <NavLink to={`${match.path}/what-is-google-adwords`} exact activeClassName="selected-service-links">what is google adwords?</NavLink>
                </li>
             </ul>
             <div className="marketings-section">

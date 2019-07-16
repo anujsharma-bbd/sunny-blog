@@ -1,5 +1,6 @@
 import React from 'react';
-import ScrollableAnchor, { goToAnchor } from 'react-scrollable-anchor'
+import ReactDOM from 'react-dom';
+import digimarketing from '../../assets/digimarketing.jpeg';
 
 class DigitalMarketing extends React.Component {
    constructor(props) {
@@ -7,7 +8,10 @@ class DigitalMarketing extends React.Component {
       this.gotToSection = this.gotToSection.bind(this);
    }
    gotToSection(sectionname) {
-      goToAnchor(sectionname);
+      let node = ReactDOM.findDOMNode(this.refs[sectionname]);
+      if (node) {
+         node.scrollIntoView();
+      }
    }
    render() {
       return (
@@ -22,24 +26,27 @@ class DigitalMarketing extends React.Component {
             <p>It is. In fact, "constant" internet usage among adults increased by 5% in just the last three years, according to Pew Research. And although we say it a lot, the way people shop and buy really has changed along with it -- meaning offline marketing isn't as effective as it used to be.</p>
             <p>Marketing has always been about connecting with your audience in the right place and at the right time. Today, that means you need to meet them where they are already spending time: on the internet.</p>
             <p>Enter digital marketing -- in other words, any form of marketing that exists online.</p>
+            <p>
+               <img src={digimarketing} alt="" style={{ borderRadius: '5px' }} className="trend1" />
+            </p>
             <p> we talk a lot about inbound marketing as a really effective way to attract, engage, and delight customers online. But we still get a lot of questions from people all around the world about digital marketing. So, we decided to answer them. Click the links below to jump to each question, or keep reading to see how digital marketing is carries out today.</p>
             <ul className="got-to-sections">
                <li><span onClick={() => this.gotToSection('whatis')}>What is digital marketing?</span></li>
-               <li><span href="#examples">Digital Marketing Examples</span></li>
-               <li><span href="#marketer">What does a digital marketer do?</span></li>
-               <li><span href="#versus">Inbound Marketing vs. Digital Marketing: Which is it?</span></li>
-               <li><span href="#doesitwork">Does digital marketing work for all businesses?</span></li>
-               <li><span href="#roleof">What is the role of digital marketing to a company?</span></li>
-               <li><span href="#typesof">What types of digital content should I create?</span></li>
-               <li><span href="#howlong">How long will it take to see results from my content?</span></li>
-               <li><span href="#budget">Do I need a big budget for digital marketing?</span></li>
-               <li><span href="#mobile">How does mobile marketing fit into my digital marketing strategy?</span></li>
-               <li><span href="#nowwhat">I'm ready to try digital marketing. Now what?</span></li>
+               <li><span onClick={() => this.gotToSection('examples')}>Digital Marketing Examples</span></li>
+               <li><span onClick={() => this.gotToSection('marketer')}>What does a digital marketer do?</span></li>
+               <li><span onClick={() => this.gotToSection('versus')} >Inbound Marketing vs. Digital Marketing: Which is it?</span></li>
+               <li><span onClick={() => this.gotToSection('doesitwork')}>Does digital marketing work for all businesses?</span></li>
+               <li><span onClick={() => this.gotToSection('roleof')} >What is the role of digital marketing to a company?</span></li>
+               <li><span onClick={() => this.gotToSection('typesof')}>What types of digital content should I create?</span></li>
+               <li><span onClick={() => this.gotToSection('howlong')}>How long will it take to see results from my content?</span></li>
+               <li><span onClick={() => this.gotToSection('budget')}>Do I need a big budget for digital marketing?</span></li>
+               <li><span onClick={() => this.gotToSection('nowwhat')}>How mobile marketing fit into my digital marketing strategy?</span></li>
+               <li><span onClick={() => this.gotToSection('nowwhat')}>I'm ready to try digital marketing. Now what?</span></li>
             </ul>
             <div className="hsg-featured-snippet">
                <div>So, how do you define digital marketing today?</div>
                <br />
-               <h2>What is digital marketing?</h2>
+               <h2 ref="whatis">What is digital marketing?</h2>
                <p>Digital marketing encompasses all marketing efforts that use an electronic device or the internet. Businesses leverage digital channels such as search engines, social media, email, and other websites to connect with current and prospective customers.</p>
             </div>
             <p>
@@ -51,7 +58,7 @@ class DigitalMarketing extends React.Component {
             <p>A <strong>content marketer</strong>, for example, can create a series of blog posts that serve to generate leads from a new ebook the business recently created. The company's <strong>social media marketer</strong> might then help promote these blog posts through paid and organic posts on the business's social media accounts. Perhaps the <strong>email marketer</strong> creates an email campaign to send those who download the ebook more information on the company. We'll talk more about these specific digital marketers in a minute.</p>
             <div className="hsg-featured-snippet">
                <div className="hsg-featured-snippet__wrapper">
-                  <h2>Digital Marketing Examples</h2>
+                  <h2 ref="examples">Digital Marketing Examples</h2>
                   <div className="hsg-featured-snippet__wrapper--content" data-type="ordered">
                      <ol>
                         <li>Search Engine Optimization (SEO)</li><li>Content Marketing</li><li>Social Media Marketing</li><li>Pay Per Click (PPC)</li><li>Affiliate Marketing</li><li>Native Advertising</li><li>Marketing Automation</li><li>Email Marketing</li><li>Online PR</li><li>Inbound Marketing</li>
@@ -141,8 +148,7 @@ class DigitalMarketing extends React.Component {
                <li>Email contact lists&nbsp;vs. email spam</li>
             </ul>
             <br />
-            <a name="marketer"></a>
-            <h2>What does a digital marketer do?</h2>
+            <h2 ref="marketer">What does a digital marketer do?</h2>
             <p>Digital marketers are in charge of driving <strong>brand awareness</strong> and <strong>lead generation</strong> through all the digital channels -- both free and paid -- that are at a company's disposal. These channels include social media, the company's own website, search engine rankings, email, display advertising, and the company's blog.</p>
             <p>The digital marketer usually focuses on a different key performance indicator (KPI) for each channel so they can properly measure the company's performance across each one. A digital marketer who's in charge of SEO, for example, measures their website's "organic traffic" -- of that traffic coming from website visitors who found a page of the business's website via a Google search.</p>
             <p>Digital marketing is carried out across many marketing roles today. In small companies, one generalist might own many of the digital marketing tactics described above at the same time. In larger companies, these tactics have multiple specialists that each focus on just one or two of the brand's digital channels.</p>
@@ -159,23 +165,19 @@ class DigitalMarketing extends React.Component {
             <h4>Main KPIs: Follows, Impressions, Shares</h4>
             <p>The role of a social media manager is easy to infer from the title, but which social networks they manage for the company depends on the industry. Above all, social media managers establish a posting schedule for the company's written and visual content. This employee might also work with the content marketing specialist to develop a strategy for which content to post on which social network.</p>
             <p>(Note: Per the KPIs above, "impressions" refers to the number of times a business's posts appear on the newsfeed of a user.)</p>
-
             <br /><h3>Marketing Automation Coordinator</h3>
             <h4>Main KPIs: Email open rate, campaign click-through rate, lead-generation (conversion) rate</h4>
             <p>The marketing automation coordinator helps choose and manage the software that allows the whole marketing team to understand their customers' behavior and measure the growth of their business. Because many of the marketing operations described above might be executed separately from one another, it's important for there to be someone who can group these digital activities into individual campaigns and track each campaign's performance.</p>
-
-            <br /><a name="versus"></a>
-            <h2>Inbound Marketing vs. Digital Marketing: Which Is It?</h2>
+            <br />
+            <h2 ref="versus">Inbound Marketing vs. Digital Marketing: Which Is It?</h2>
             <p>On the surface, the two seem similar: Both occur primarily online, and both focus on creating digital content for people to consume. So what's the difference?</p>
             <p>The term "digital marketing" doesn't differentiate between push and pull marketing tactics (or what we might now refer to as ‘inbound' and ‘outbound' methods). Both can still fall under the umbrella of digital marketing.</p>
             <p>Digital <i>outbound</i> tactics aim to put a marketing message directly in front of as many people as possible in the online space -- regardless of whether it's relevant or welcomed. For example, the garish banner ads you see at the top of many websites try to <i>push</i> a product or promotion onto people who aren't necessarily ready to receive it.</p>
             <p>On the other hand, marketers who employ digital<i> inbound </i>tactics use online content to attract their target customers onto their websites by providing assets that are helpful to them. One of the simplest yet most powerful inbound digital marketing assets is a blog, which allows your website to capitalize on the terms which your ideal customers are searching for.</p>
             <p>Ultimately, inbound marketing is a methodology that uses digital marketing assets to attract, engage, and delight customers online. Digital marketing, on the other hand, is simply an umbrella term to describe online marketing tactics of any kind, regardless of whether they're considered inbound or outbound.</p>
-            <a name="doesitwork"></a>
-
-            <br /><h2>Does digital marketing work for all businesses?</h2>
+            <br />
+            <h2 ref="doesitwork">Does digital marketing work for all businesses?</h2>
             <p>Digital marketing can work for any business in any industry. Regardless of what your company sells, digital marketing still involves building out buyer personas to identify your audience's needs, and creating valuable online content. However, that's not to say all businesses should implement a digital marketing strategy in the same way.</p>
-
             <br /><h3>B2B Digital Marketing</h3>
             <p>If your company is business-to-business (B2B), your digital marketing efforts are likely to be centered around online lead generation, with the end goal being for someone to speak to a salesperson. For that reason, the role of your marketing strategy is to attract and convert the highest quality leads for your salespeople via your website and supporting digital channels.</p>
             <p>Beyond your website, you'll probably choose to focus your efforts on business-focused channels like LinkedIn where your demographic is spending their time online.</p>
@@ -184,8 +186,7 @@ class DigitalMarketing extends React.Component {
             <p>If your company is business-to-consumer (B2C), depending on the price point of your products, it's likely that the goal of your digital marketing efforts is to attract people to your website and have them become customers without ever needing to speak to a salesperson.</p>
             <p>For that reason, you're probably less likely to focus on ‘leads' in their traditional sense, and more likely to focus on building an accelerated buyer's journey, from the moment someone lands on your website, to the moment that they make a purchase. This will often mean your product features in your content higher up in the marketing funnel than it might for a B2B business, and you might need to use stronger calls-to-action (CTAs).</p>
             <p>For B2C companies, channels like Instagram and Pinterest can often be more valuable than business-focused platforms LinkedIn.</p>
-            <a name="roleof"></a>
-            <h2>What is the role of digital marketing to a company?</h2>
+            <h2 ref="roleof">What is the role of digital marketing to a company?</h2>
             <p>Unlike most offline marketing efforts, digital marketing allows marketers to see accurate results in real time. If you've ever put an advert in a newspaper, you'll know how difficult it is to estimate how many people actually flipped to that page and paid attention to your ad. There's no surefire way to know if that ad was responsible for any sales at all.</p>
             <p>On the other hand, with digital marketing, you can measure the ROI of pretty much any aspect of your marketing efforts.</p>
             <p>Here are some examples:</p>
@@ -204,8 +205,7 @@ class DigitalMarketing extends React.Component {
             <div className="video-container-responsive" style={{ textAlign: "center" }}>
                <iframe className="youtube-frame" src="https://www.youtube.com/embed/h2hfTPjEDIA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
-            <a name="typesof"></a>
-            <br /><h2>What types of digital content should I create?</h2>
+            <br /><h2 ref="typesof">What types of digital content should I create?</h2>
             <p>The kind of content you create depends on your audience's needs at different stages in the buyer's journey. You should start by creating buyer personas (use these free templates, or try <a href="//www.makemypersona.com" target="_blank">makemypersona.com</a>) to identify what your audience's goals and challenges are in relation to your business. On a basic level, your online content should aim to help them meet these goals, and overcome their challenges.</p>
             <p>Then, you'll need to think about when they're most likely to be ready to consume this content in relation to what stage they're at in their buyer's journey. We call this content mapping.</p>
             <p>With content mapping, the goal is to target content according to:</p>
@@ -231,26 +231,25 @@ class DigitalMarketing extends React.Component {
                <li style={{ fontWeight: '400' }}><strong>Case studies.</strong> Having detailed case studies on your website can be an effective form of content for those who are ready to make a purchasing decision, as it helps you positively influence their decision.</li>
                <li style={{ fontWeight: '400' }}><strong>Testimonials. </strong>If case studies aren't a good fit for your business, having short testimonials around your website is a good alternative. For B2C brands, think of testimonials a little more loosely. If you're a clothing brand, these might take the form of photos of how other people styled a shirt or dress, pulled from a branded hashtag where people can contribute.</li>
             </ul>
-            <br /><a name="howlong"></a>
-            <h2>How long will it take to see results from my content?</h2>
+            <br />
+            <h2 ref="howlong">How long will it take to see results from my content?</h2>
             <p>With digital marketing, it can often feel like you're able to see results much faster than you might with offline marketing due to the fact it's easier to measure ROI. However, it ultimately depends on the scale and effectiveness of your digital marketing strategy.</p>
             <p>If you spend time building comprehensive buyer personas to identify the needs of your audience, and you focus on creating quality online content to attract and convert them, then you're likely to see strong results within the first six months.</p>
             <p>If paid advertising is part of your digital strategy, then the results come even quicker -- but it's recommended to focus on building your organic (or ‘free') reach using content, SEO, and social media for long-term, sustainable success.</p>
-            <a name="budget"></a>
-            <br /><h2>Do I need a big budget for digital marketing?</h2>
+            <br />
+            <h2 ref="budget">Do I need a big budget for digital marketing?</h2>
             <p>As with anything, it really depends on what elements of digital marketing you're looking to add to your strategy.</p>
             <p>If you're focusing on inbound techniques like SEO, social media, and content creation for a preexisting website, the good news is you don't need very much budget at all. With inbound marketing, the main focus is on creating high quality content that your audience will want to consume, which unless you're planning to outsource the work, the only investment you'll need is your time.</p>
             <p>You can get started by hosting a website and creating content using BlogDekho's CMS. For those on a tight budget, you can get started using WordPress hosted on <a href="https://wpengine.com/" rel=" noopener" target="_blank">WP Engine</a> and using a simple them from <a href="https://www.studiopress.com" rel=" noopener" target="_blank">StudioPress</a>.</p>
             <p>With outbound techniques like online advertising and purchasing email lists, there is undoubtedly some expense. What it costs comes down to what kind of visibility you want to receive as a result of the advertising.</p>
             <p>For example, to implement PPC using Google AdWords, you'll bid against other companies in your industry to appear at the top of Google's search results for keywords associated with your business. Depending on the competitiveness of the keyword, this can be reasonably affordable, or extremely expensive, which is why it's a good idea to focus building your organic reach, too.</p>
-            <br /><a name="mobile"></a>
-            <h2>How does mobile marketing fit into my digital marketing strategy?</h2>
+            <br />
+            <h2 ref="mobile">How mobile marketing fit into my digital marketing strategy?</h2>
             <p>Another key component of digital marketing is mobile marketing. In fact, smartphone usage as a whole accounts for 69% of time spent consuming digital media in the U.S., while desktop-based digital media consumption makes up less than half -- and the U.S. still isn't mobile's biggest fan compared to other countries.</p>
             <p>This means it's essential to optimize your digital ads, web pages, social media images, and other digital assets for mobile devices. If your company has a mobile app that enables users to engage with your brand or shop your products, your app falls under the digital marketing umbrella, too.</p>
             <p>Those engaging with your company online via mobile devices need to have the same positive experience as they would on desktop. This means implementing a mobile-friendly or responsive website design to make browsing user-friendly for those on mobile devices. It might also mean reducing the length of your lead generation forms to create a hassle-free experience for people downloading your content on-the-go. As for your social media images, it's important to always have a mobile user in mind when creating them as image dimensions are smaller on mobile devices, meaning text can be cut-off.</p>
             <p>There are lots of ways you can optimize your digital marketing assets for mobile users, and when implementing any digital marketing strategy, it's hugely important to consider how the experience will translate on mobile devices. By ensuring this is always front-of-mind, you'll be creating digital experiences that work for your audience, and consequently achieve the results you're hoping for.</p>
-            <a name="nowwhat"></a>
-            <br /><h2>I'm ready to try digital marketing. Now what?</h2>
+            <br /><h2 ref="nowwhat">I'm ready to try digital marketing. Now what?</h2>
             <p>If you're already doing digital marketing, it's likely that you're at least reaching some segments of your audience online. No doubt you can think of some areas of your strategy that could use a little improvement, though.</p>
             <p>That's why we created <em>Why Digital Marketing? The Essential Guide to Marketing Your Brand Online</em> -- a step-by-step guide to help you build a digital marketing strategy that's truly effective, whether you're a complete beginner or have a little more experience. You can download it for free here.</p>
          </div>

@@ -4,7 +4,7 @@ import "babel-polyfill";
 
 import { asyncComponent } from './shared/asyncComponent';
 import profileImg from './assets/sunny-profile.jpg';
-
+import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 const AsyncHome = asyncComponent(() => import('./components/home'));
 const AsyncAboutUs = asyncComponent(() => import('./components/aboutus'));
 const AsyncJourney = asyncComponent(() => import('./components/journey'));
@@ -22,7 +22,23 @@ class RouterCollection extends React.Component {
                      <div className="full-blog">Sunny&nbsp;Sharma's&nbsp;blog</div>
                      <div className="short-blog">Sunny</div>
                   </div>
-                  <NavLink to='/marketings' exact activeClassName="selected-menu">Marketing</NavLink>
+                  <ul className="menu-header">
+                     <UncontrolledDropdown>
+                        <NavLink to='/marketings' className="sub-menu-class" activeClassName="selected-menu">
+                           <DropdownToggle nav caret>
+                              Marketing
+                           </DropdownToggle>
+                        </NavLink>
+                        <DropdownMenu right>
+                           <DropdownItem tag="span" className="p-0">
+                              <NavLink tag="div" to={`/marketings/what-is-digital-marketing`} className="submenu-item" exact activeClassName="selected-sub-menu">what is digital marketing?</NavLink>
+                           </DropdownItem>
+                           <DropdownItem tag="span" className="p-0">
+                              <NavLink tag="div" to={`/marketings/what-is-google-adwords`} className="submenu-item" exact activeClassName="selected-sub-menu">what is google adwords?</NavLink>
+                           </DropdownItem>
+                        </DropdownMenu>
+                     </UncontrolledDropdown>
+                  </ul>
                   <NavLink to='/contactus' exact activeClassName="selected-menu">Contact Us</NavLink>
                   <NavLink to='/journey' exact activeClassName="selected-menu">Journey</NavLink>
                   <NavLink to='/aboutme' exact activeClassName="selected-menu">About Me</NavLink>

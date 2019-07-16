@@ -9,6 +9,7 @@ import campaign1 from '../../assets/business-enmotion-800x236.png';
 import campaign2 from '../../assets/display-what-is-Google-Adwords.png';
 import shoppingad1 from '../../assets/shopping_ads_1.png';
 import videoad1 from '../../assets/videoads-1.png';
+import gAds from '../../assets/google-adwords.jpeg';
 import campaign3 from '../../assets/almarai-800x225.png';
 import universaladd from '../../assets/universal-app-ads.png'
 import appcampaign from '../../assets/kcb-app-campaign-800x310.png'
@@ -25,7 +26,7 @@ class GoogleAdword extends React.Component {
                   <h1 className="entry-title pb-5 pt-5 text-center">What is Google AdWords?</h1>
                </div>
             </header>
-            <br/>
+            <br />
             <p>
                When I was first asked to run Google AdWords campaigns 4 years ago, I had the same question on my mind. It was my first job, and I had joined for a role in Market Research. Google Ads was a concept that seemed completely new.
             </p>
@@ -33,16 +34,19 @@ class GoogleAdword extends React.Component {
                I know, I know…now it’s everywhere – digital marketing is taught as a course in MBA programs, there are multiple certification programs, several tutorials available for self-starters, and people are overall more informed about it as an advertising option, and as a lead generation channel.  But, that wasn’t the case then.
             </p>
             <p>
+               <img src={gAds} alt="" className="trend1" />
+            </p>
+            <p>
                So, when I was asked to run these campaigns, I started doing some reading to get started. That’s when I realized that I have already seen and interacted with these ads for a long time, just that I didn’t think of them as ads. Anyway, long story short, that’s how I began, and have now run and experimented with all possible types of ads on Google AdWords.
             </p>
             <p>
                And, my intent of writing this guide is to help clueless beginners who are just getting started with AdWords. Because believe me, even after you have learned all the theory that you possibly can, you’ll still need several rounds of testing different things to get AdWords right – and even then, there’ll always be room for improvement.
             </p>
-            <br/>
+            <br />
             <h2><strong>The ever-growing popularity of Google AdWords</strong></h2>
             <p>
                Take a look at the trend for the term “what is Google AdWords” since 2004. It has continuously grown and would continue to grow as more and more businesses keep coming online.
-               </p>
+            </p>
             <img src={imgTrend1} alt="" className="trend1" />
             <h2><strong>So, what is Google AdWords?</strong></h2>
             <p>
@@ -56,7 +60,7 @@ class GoogleAdword extends React.Component {
             </p>
             <p>But how did Google know which ads to display?</p>
             <p><img src={googleAdwordsFlowRecent} alt="" className="trend1" /></p>
-            <br/>
+            <br />
             <p>Now that we have that sorted, let’s discuss the types of ads you can run using the Google AdWords platform.</p>
             <h2><strong>Type of ads in Google AdWords</strong>
             </h2>
