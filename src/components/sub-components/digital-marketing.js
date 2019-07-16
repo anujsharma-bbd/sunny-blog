@@ -263,7 +263,7 @@ class DigitalMarketing extends React.Component {
             <hr/>
             <br/>
             <div>
-               <DisqusCommentsComponent disqusId={'digitalmarketing-topic'} />
+               <DisqusCommentsComponent disqusId={'blogdekho-co-in'} />
             </div>
          </div>
       );

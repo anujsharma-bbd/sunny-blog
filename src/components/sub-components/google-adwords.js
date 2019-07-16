@@ -148,7 +148,7 @@ class GoogleAdword extends React.Component {
             <hr />
             <br />
             <div>
-               <DisqusCommentsComponent disqusId={'googleadwords-topic'} />
+               <DisqusCommentsComponent disqusId={'blogdekho-co-in'} />
             </div>
          </div>
       );
