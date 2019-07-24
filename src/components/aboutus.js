@@ -16,6 +16,9 @@ class AboutUs extends React.Component {
                <link rel="canonical" href="http://blogdekho.co.in/aboutme" />
             </Helmet>
             <h2 className="aboutus-header"><span className="abt-header">Hi, I'm Sunny</span></h2>
+            <div>
+               Mobile: +91-8126131601   
+            </div>
             <div className="aboutus-text">
                <br />
                <p><span style={style1}>I used to have a real job, but I found a way out. </span></p>

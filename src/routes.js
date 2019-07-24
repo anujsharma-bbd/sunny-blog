@@ -31,10 +31,10 @@ class RouterCollection extends React.Component {
                         </NavLink>
                         <DropdownMenu right>
                            <DropdownItem tag="span" className="p-0">
-                              <NavLink tag="div" to={`/marketings/what-is-digital-marketing`} className="submenu-item" exact activeClassName="selected-sub-menu">what is digital marketing?</NavLink>
+                              <NavLink tag="div" to={`/marketings/what-is-digital-marketing`} className="submenu-item" exact activeClassName="selected-sub-menu">What is Digital Marketing?</NavLink>
                            </DropdownItem>
                            <DropdownItem tag="span" className="p-0">
-                              <NavLink tag="div" to={`/marketings/what-is-google-adwords`} className="submenu-item" exact activeClassName="selected-sub-menu">what is google adwords?</NavLink>
+                              <NavLink tag="div" to={`/marketings/what-is-google-adwords`} className="submenu-item" exact activeClassName="selected-sub-menu">What is Google Adwords?</NavLink>
                            </DropdownItem>
                         </DropdownMenu>
                      </UncontrolledDropdown>

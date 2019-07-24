@@ -17,12 +17,15 @@ class Marketings extends React.Component {
             <br />
             <h2><span className="cnt-header">Marketings</span></h2>
             <br />
+            <div className="text-right">
+               Mobile: +91-8126131601   
+            </div>
             <ul className="services-links">
                <li>
-                  <NavLink to={`${match.path}/what-is-digital-marketing`} exact activeClassName="selected-service-links">what is digital marketing?</NavLink>
+                  <NavLink to={`${match.path}/what-is-digital-marketing`} exact activeClassName="selected-service-links">What is Digital Marketing?</NavLink>
                </li>
                <li>
-                  <NavLink to={`${match.path}/what-is-google-adwords`} exact activeClassName="selected-service-links">what is google adwords?</NavLink>
+                  <NavLink to={`${match.path}/what-is-google-adwords`} exact activeClassName="selected-service-links">What is Google Adwords?</NavLink>
                </li>
             </ul>
             <div className="marketings-section">
