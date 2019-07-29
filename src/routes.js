@@ -10,6 +10,7 @@ const AsyncAboutUs = asyncComponent(() => import('./components/aboutus'));
 const AsyncJourney = asyncComponent(() => import('./components/journey'));
 const AsyncContactUs = asyncComponent(() => import('./components/contactus'));
 const AsyncMarketing = asyncComponent(() => import('./components/marketing'));
+const AsynDevices = asyncComponent(() => import('./components/devices'));
 
 class RouterCollection extends React.Component {
    render() {
@@ -22,6 +23,20 @@ class RouterCollection extends React.Component {
                      <div className="full-blog">Sunny&nbsp;Sharma's&nbsp;blog</div>
                      <div className="short-blog">Sunny</div>
                   </div>
+                  <ul className="menu-header">
+                     <UncontrolledDropdown>
+                        <NavLink to='/devices' className="sub-menu-class" activeClassName="selected-menu">
+                           <DropdownToggle nav caret>
+                              Devices
+                           </DropdownToggle>
+                        </NavLink>
+                        <DropdownMenu right>
+                           <DropdownItem tag="span" className="p-0">
+                              <NavLink tag="div" to={`/devices/printers`} className="submenu-item" exact activeClassName="selected-sub-menu">Printers</NavLink>
+                           </DropdownItem>
+                        </DropdownMenu>
+                     </UncontrolledDropdown>
+                  </ul>
                   <ul className="menu-header">
                      <UncontrolledDropdown>
                         <NavLink to='/marketings' className="sub-menu-class" activeClassName="selected-menu">
@@ -52,6 +67,7 @@ class RouterCollection extends React.Component {
                      <Route exact path='/journey' component={AsyncJourney} />
                      <Route exact path='/contactus' component={AsyncContactUs} />
                      <Route path='/marketings' component={AsyncMarketing} />
+                     <Route path='/devices' component={AsynDevices} />
                   </Switch>
                </div>
                {  /*      // <footer className="App-footer">

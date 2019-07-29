@@ -30,7 +30,7 @@ class GoogleAdword extends React.Component {
             </Helmet>
             <header className="entry-header pt60 pb60">
                <div className="container">
-                  <h1 className="entry-title pb-5 pt-5 text-center">What is Google AdWords?</h1>
+                  <h1 className="entry-title pb-5 pt-5 text-center text-white">What is Google AdWords?</h1>
                </div>
             </header>
             <br />

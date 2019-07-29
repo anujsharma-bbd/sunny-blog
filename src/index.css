@@ -4,18 +4,19 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    overflow-x: hidden;
-   background-color: #dbdcd9!important;
+   /* background-color: #dbdcd9!important; */
    /* font-family: Calibri, Arial, sans-serif; */
-   font-family: Georgia, Times New Roman, Times, serif;
+   /* font-family: Georgia, Times New Roman, Times, serif; */
    color: #666666!important;
-   font-size: 15px;
+   font-size: 16px;
+   line-height: 24px;
 }
 
 body::before {
    all: unset;
-   background-image: url('./assets/macbook.jpg');
+   /* background-image: url('./assets/macbook.jpg');
    background-size: cover;
-   background-repeat: no-repeat;
+   background-repeat: no-repeat; */
    content: "";
    display: block;
    position: absolute;
@@ -116,7 +117,7 @@ img.trend1 {
    flex-direction: row-reverse;
    align-items: center;
    justify-content: right;
-   font-size: calc(7px + 1vmin);
+   font-size: calc(5px + 1vmin);
    color: white;
    position: relative;
    width: 100%;
@@ -422,7 +423,7 @@ p {
    .App-header {
       font-size: calc(10px + 1vmin);
    }
-   .myjourney, .aboutus, .homepage, .contactus, .services {
+   .myjourney, .aboutus, .homepage, .contactus, .services,.devices {
       margin: 0px auto;
       width: 1000px;
       padding: 10px 40px;

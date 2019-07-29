@@ -25,7 +25,7 @@ class DigitalMarketing extends React.Component {
             </Helmet>
             <header className="entry-header pt60 pb60">
                <div className="container">
-                  <h1 className="entry-title pb-5 pt-5 text-center">What Is Digital Marketing?</h1>
+                  <h1 className="entry-title pb-5 pt-5 text-center text-white">What Is Digital Marketing?</h1>
                </div>
             </header>
             <br />
