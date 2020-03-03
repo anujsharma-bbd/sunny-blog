@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "228b0583e703e3f9708eac6f3c493692",
+    "revision": "df4eb6cb0da6e989010572433000a121",
     "url": "/sunny-blog/index.html"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sunny-blog/static/js/14.fd209368.chunk.js"
   },
   {
-    "revision": "2d6034d1cc18d3fe999d",
-    "url": "/sunny-blog/static/js/15.2ff54471.chunk.js"
+    "revision": "4e41e2a99ee0b471fd3d",
+    "url": "/sunny-blog/static/js/15.ab902b2f.chunk.js"
   },
   {
     "revision": "4fe7b0f8e4a52b2a9ee6",
@@ -76,8 +76,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sunny-blog/static/js/main.b6486828.chunk.js"
   },
   {
-    "revision": "c4a59926f4a8d0476af8",
-    "url": "/sunny-blog/static/js/runtime~main.47e676f0.js"
+    "revision": "ba97f9f89ef154950ef2",
+    "url": "/sunny-blog/static/js/runtime~main.d20eff63.js"
   },
   {
     "revision": "9dcc1ed731d602a751355bba7a963082",
